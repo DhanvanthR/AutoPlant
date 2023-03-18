@@ -6,3 +6,5 @@ Implemented with a waterproof pump, soil sensor, LDR (light capacitor), and Ardu
 IoT Dashboard Example:
 ![Screen Shot 2023-03-17 at 7 19 50 PM](https://user-images.githubusercontent.com/94002108/226078130-f902af45-1394-4635-bcec-b6c0adabd847.png)
 
+Demonstration Video:
+https://drive.google.com/file/d/12o2zM-1WTmAWngMMZ_62iI6WTVzGmSHP/view?usp=sharing
