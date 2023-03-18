@@ -45,12 +45,12 @@ void setup() {
   
   unsigned status;
   
-  status = bme.begin(0x76); 
+  status = bme.begin(0x76); //bme280 sensor 
 
   // Defined in thingProperties.h
   initProperties();
   
-  pinMode(light, INPUT);
+  pinMode(light, INPUT); //defining all sensors connected to the MKR Wifi as an input
   pinMode(soil, INPUT);
   pinMode(red, OUTPUT);
   pinMode(green, OUTPUT);
@@ -73,7 +73,7 @@ void setup() {
 
 void loop() { //Constantly update the IoT Monitor Dashboard of these values to keep an eye on the plant
   ArduinoCloud.update();
-  // Your code here 
+  //constantly looping to check for all the values needed to run the system
   onHumidityChange();
   onTempChange();
   onRgbChange();
@@ -84,13 +84,13 @@ void loop() { //Constantly update the IoT Monitor Dashboard of these values to k
 }
 
 void onLdrChange() {
-  // Do something
+  // read the light values (bright [day] or not [night]) and display to the IoT Dashboard
   ldr = analogRead(light);
 }
 
 
 void onHumidityChange() {
-  // Do something
+  // read the humidity from the BME280 sensor and display to the IoT Dashboard
   humidity = bme.readHumidity();
 
   
@@ -100,7 +100,7 @@ void onHumidityChange() {
 
 
 void onRgbChange() {
-  // Do something
+  // reading the soil sensor and retireving the values to see if the soil needs water or not, also displays to the IoT Dashboard
   stats = analogRead(soil);
   Serial.println(stats);
   if (stats > 757) {
@@ -120,14 +120,14 @@ void onRgbChange() {
 
 
 void onTempChange() {
-  // Do something
+  // read the temperature of the environment with the BME280 sensor and display to the IoT dashboard
   temp = bme.readTemperature();
 
 }
 
 
 void onPowerChange() {
-  // Do something
+  // referencing the "stats" variable when checking for the soil...if the soil needs water, turn on the motor, else otherwise
   if (stats > 758) {
     digitalWrite(mos, HIGH);
     power = HIGH;
