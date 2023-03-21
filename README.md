@@ -8,3 +8,10 @@ IoT Dashboard Example:
 
 Demonstration Video:
 https://drive.google.com/file/d/12o2zM-1WTmAWngMMZ_62iI6WTVzGmSHP/view?usp=sharing
+
+Materials Used:
+1. Arduino MKR Wifi 1010
+2. Arduino IoT Cloud
+3. Jumper Wires, Breadboard Type (Male & Female wires)
+4. Capacitative Soil Moisture Sensor
+
