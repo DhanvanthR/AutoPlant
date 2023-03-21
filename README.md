@@ -14,4 +14,6 @@ Materials Used:
 2. Arduino IoT Cloud
 3. Jumper Wires, Breadboard Type (Male & Female wires)
 4. Capacitative Soil Moisture Sensor
-
+5. BME280 Sensor
+6. Mosfet Board
+7. RGB Sensor
